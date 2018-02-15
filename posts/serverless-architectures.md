@@ -36,7 +36,7 @@ In this article, we are referring to the second definition because it is more re
 The term "Serverless" is confusing because regardless of the implementation, there is still inevitably a server involved. The main difference is that the company creating and supporting an application, running on  a Serverless platform, effectively outsources the server management aspects to a provider (AWS, Google, Azure,...), and so can focus only on the functional part of the application.
 
 ## Some use cases
-Let's now study concrete cases of using Serverless. You can find more details on these architectures and even real examples by visiting the awslabs github (https://github.com/awslabs).
+Let's now study concrete cases of using Serverless. You can find more details on these architectures and even real examples by visiting [Amazon Web Services - Labs](https://github.com/awslabs).
 
 ### Real-time file processing
 The first architecture we will see is about file processing. This architecture works very well when you need to have several transformations of a datasource before you can generate different output formats.
@@ -161,7 +161,7 @@ When attempting to develop and test locally, you will need local stub systems th
 The same applies to the integration of FaaS services. It is still difficult to find a local implementation of the structure that embeds the functions. We will therefore have to use the final environment directly. Although staging concepts separate test use from production use, unfortunately this does not apply to all services.
 
 #### Deployment & versioning
-Currently, no successful pattern has been established for the packaging and deployment phase`s. That's why we are rapidly facing constraints on atomic function deployment. Take the case of a series of functions that run, to ensure a consistent deployment, you will have to stop your service at the origin of the triggering events, then deploy all your functions and then activate the service again. This can be a major problem for applications requiring high availability. The same goes for the application versioning and rollback phase.
+Currently, no successful pattern has been established for the packaging and deployment phase's. That's why we are rapidly facing constraints on atomic function deployment. Take the case of a series of functions that run, to ensure a consistent deployment, you will have to stop your service at the origin of the triggering events, then deploy all your functions and then activate the service again. This can be a major problem for applications requiring high availability. The same goes for the application versioning and rollback phase.
 
 #### Supervision
 To date, the only possible solutions for monitoring and debugging your functions in detail are those provided by the service provider and are generally relatively immature. Even though enormous efforts are being made as with the release of AWS X-Ray, there is still a long way to go in order to have a complete and specific FaaS solution.
